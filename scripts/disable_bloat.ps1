@@ -59,7 +59,7 @@ $_winApps = @(
   "microsoft.windowscommunicationsapps"
   "Microsoft.WindowsMaps"
   "Microsoft.WindowsPhone"
-  #"Microsoft.WindowsSoundRecorder"
+  "Microsoft.WindowsSoundRecorder"
   #"Microsoft.WindowsStore"
   #"Microsoft.XboxApp"
   #"Microsoft.XboxGameOverlay"
@@ -174,7 +174,7 @@ Write-Output "Disabling Game DVR and Game Bar..."
 force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\GameDVR"
 Set-ItemProperty "HKLM:\SOFTWARE\Policies\Microsoft\Windows\GameDVR" "AllowgameDVR" 0
 
-Write-Output "Diabling sticky keys..."
+Write-Output "Disabling sticky keys..."
 Set-ItemProperty "HKCU:\Control Panel\Accessibility\StickyKeys" "Flags" "506"
 
 Write-Output "Setting folder view option...s"
