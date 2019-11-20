@@ -24,6 +24,7 @@ $_services = @(
   "XblAuthManager"                           # Xbox Live Auth Manager
   "XblGameSave"                              # Xbox Live Game Save Service
   "XboxNetApiSvc"                            # Xbox Live Networking Service
+  "ndu"                                      # Windows Network Data Usage Monitor
 )
 
 # List of Window's Defender tasks to disable.
@@ -68,7 +69,7 @@ $_winApps = @(
   #"Microsoft.Xbox.TCUI"
   "Microsoft.ZuneMusic"
   "Microsoft.ZuneVideo"
-  #"Microsoft.Advertising.Xaml"
+  "Microsoft.Advertising.Xaml"
 
   # Threshold 2 apps
   "Microsoft.CommsPhone"
@@ -125,7 +126,7 @@ $_apps = @(
   "89006A2E.AutodeskSketchBook"
   "D5EA27B7.Duolingo-LearnLanguagesforFree"
   "46928bounde.EclipseManager"
-  "ActiproSoftwareLLC.562882FEEB491" # next one is for the Code Writer from Actipro Software LLC
+  "ActiproSoftwareLLC.562882FEEB491" # this one is for the Code Writer from Actipro Software LLC
   "DolbyLaboratories.DolbyAccess"
   "SpotifyAB.SpotifyMusic"
   "A278AB0D.DisneyMagicKingdoms"
