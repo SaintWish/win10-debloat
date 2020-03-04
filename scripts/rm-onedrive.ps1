@@ -1,6 +1,4 @@
-#   Description:
 # This script will remove and disable OneDrive integration.
-
 Import-Module -DisableNameChecking $PSScriptRoot\utils.psm1
 
 Write-Output "Kill OneDrive process"
@@ -28,7 +26,7 @@ Write-Output "Disable OneDrive via Group Policies"
 force-mkdir "HKLM:\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\OneDrive"
 Set-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\OneDrive" "DisableFileSyncNGSC" 1
 
-Write-Output "Remove Onedrive from explorer sidebar"
+Write-Output "Remove OneDrive from explorer sidebar"
 New-PSDrive -PSProvider "Registry" -Root "HKEY_CLASSES_ROOT" -Name "HKCR"
 mkdir -Force "HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}"
 Set-ItemProperty "HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" "System.IsPinnedToNameSpaceTree" 0
